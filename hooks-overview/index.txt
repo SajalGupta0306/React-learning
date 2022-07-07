@@ -18,7 +18,10 @@ https://github.com/machadop1407/react-hooks-course
 
 3. useEffect - Used to perform side effects in our application. It is called whenever our application is rendered. We can decide the behaviour of rendering too, 
                when to call useEffect for render or ignore calling useEffect
-    a. Primarily used for making API calls
+    Side Effects:
+        1. Primarily used for making API calls
+        2. manually changing the DOM in React
+        3. logging 
     b. Syntax - useEffect(() => {
         // make API call
     });  // this syntax will make API call when the component is rendered for the first time and afterwards for every re-render
@@ -29,7 +32,6 @@ https://github.com/machadop1407/react-hooks-course
         // make API call
     },[count]);  // this syntax will make API call when the component is rendered for the first time and afterwards only when the value of "count" is changed
     e. https://codesandbox.io/s/amazing-shirley-9bhwgf?file=/src/App.js
-
 
 4. useRef - React Hook to access and manipulate DOM elements directly
     a. Syntax - const testRef = useRef(null);
@@ -69,5 +71,10 @@ https://github.com/machadop1407/react-hooks-course
     https://codesandbox.io/s/usememo-usecallback-6ns8rw?file=/src/App.js
 
 UseCallback is used to optimize the rendering behavior of your React function components.
+ - Different function objects sharing the same code
+ - maintain single function instance between renderings
+ - A functional component wrapped inside React.memo() accepts a function object prop
+ - When the function object is a dependency to other hooks, e.g. useEffect(..., [callback])
+
 useMemo is used to memoize expensive functions to avoid having to call them on every render
 
