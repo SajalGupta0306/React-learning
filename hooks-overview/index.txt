@@ -78,3 +78,7 @@ UseCallback is used to optimize the rendering behavior of your React function co
 
 useMemo is used to memoize expensive functions to avoid having to call them on every render
 
+10. forwardRef - Ref forwarding is a technique for automatically passing a ref through a component to one of its children
+Eg: https://stackblitz.com/edit/react-wimkc1?file=src%2FApp.js
+
+
