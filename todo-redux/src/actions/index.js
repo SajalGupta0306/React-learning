@@ -8,12 +8,16 @@ export const onAddTodo = (value) => {
 };
 
 // for thunk based async code
-// export const onAddTodo = (value) => {
-//   return (dispatch) => {
-//     dispatch({
-//       type: ADD_TODO,
-//       payload: value,
-//     });
+// export const getExistingTodos = () => {
+//   return async (dispatch) => {
+//     const resp = await fetch("api-url");
+//     const data = await resp.json();
+//     if (data) {
+//       dispatch({
+//         type: ADD_TODO,
+//         payload: data,
+//       });
+//     }
 //   };
 // };
 
