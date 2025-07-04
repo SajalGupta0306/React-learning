@@ -52,6 +52,12 @@ export default function VirtualizedList({ list, height, width, itemHeight }) {
           position: "relative",
         }}
       >
+{/*         this below div can be replaced ineated of adding relative/ aboslute css portion */}
+{/*             <div
+          style={{
+            transform: `translateY(${indices[0] * itemHeight}px)`,
+          }}
+        > */}
         {visibleList.map((item, index) => {
           return (
             <div
@@ -73,6 +79,7 @@ export default function VirtualizedList({ list, height, width, itemHeight }) {
           );
         })}
       </div>
+{/*               </div> */}
     </div>
   );
 }
